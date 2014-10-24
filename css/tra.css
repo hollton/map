@@ -1,3 +1,4 @@
+/*交通路线*/
 .tra{
 	height: auto;
 	width:820px;
@@ -126,3 +127,31 @@ left: 9px;
 .mapg img{
 	margin:10px auto;
 	border: 1px solid #E8EFF1;}
+	
+/*Tab切换覆盖*/
+.lable td {
+	border-width:0;
+	padding:0;
+}
+
+.active {
+	color: #000000;
+	background:none;
+	border-style: none;
+	border-color: #E5E5E5;
+	cursor: pointer;
+	text-align: center;
+	height:29px;
+}
+
+.inactive {
+	color: #000000;
+	background:none;
+	cursor: pointer;
+	text-align: center;
+	height:32px;
+}
+
+.blank {
+	width:0;
+}
