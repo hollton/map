@@ -931,39 +931,3 @@ pre{
 	height:10px;}
 
 .cm_detail td{ line-height:42px;}
-
-/*Tab切换*/
-.lable td {
-	border-width: 1px;
-	padding: 0 5;
-	font-size: 15px;
-}
-
-.active {
-	color: #AA3A3F;
-	background-image: url(../images/tablebg1.png);
-	background-repeat: no-repeat;
-	border-style: none;
-	border-color: #E5E5E5;
-	cursor: pointer;
-	text-align: center;
-	width: 117px;
-	*+width:115px;
-	height:32px;
-}
-
-.inactive {
-	color: #F47835;
-	background-image: url(../images/tablebg0.png);
-	background-repeat: no-repeat;
-	cursor: pointer;
-	text-align: center;
-	width: 119px;
-	*+width:114px;
-	height:32px;
-}
-
-.blank {
-	width: 552px;
-	*+width:535px;
-}

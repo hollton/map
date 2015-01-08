@@ -1,59 +1,81 @@
-/***********回到顶部************/
+﻿/*********************回到顶部********************************/
+		
+var getDiv=document.getElementById('returntop');
 
- var getDiv=document.getElementById('returntop');
+getDiv.onclick=function(){
 
- getDiv.onclick=function(){
+window.scrollTo(0,0);
 
- window.scrollTo(0,0);
+}
 
- }
+window.onscroll=function(){
 
- window.onscroll=function(){
+if(document.documentElement.scrollTop){
 
- if(document.documentElement.scrollTop){
+getDiv.style.display="block";
 
- getDiv.style.display="block";
+}else if(document.body.scrollTop){
 
- }else if(document.body.scrollTop){
+getDiv.style.display="block";
 
- getDiv.style.display="block";
+}else{
 
- }else{
+getDiv.style.display="none";
 
- getDiv.style.display="none";
+}
 
- }
+}
 
- }
+function getWinSize(){
 
- function getWinSize(){
+var winHeight=window.innerHeight,winWidth=window.innerWidth;
 
- var winHeight=window.innerHeight,winWidth=window.innerWidth;
+if(document.documentElement.clientHeight){
 
- if(document.documentElement.clientHeight){
+winHeight=document.documentElement.clientHeight;
 
- winHeight=document.documentElement.clientHeight;
+winWidth=document.documentElement.clientWidth;
 
- winWidth=document.documentElement.clientWidth;
+}else{
 
- }else{
+winHeight=document.body.clientHeight;
 
- winHeight=document.body.clientHeight;
+winWidth=document.body.clientWidth;
 
- winWidth=document.body.clientWidth;
+}
 
- }
+ var height=winHeight-150;
 
-     var height=winHeight-150;
+var width=winWidth-100;
 
- var width=winWidth-100;
+getDiv.style.top=height+"px";
 
- getDiv.style.top=height+"px";
+getDiv.style.left=width+"px";
 
- getDiv.style.left=width+"px";
+}
 
- }
+getWinSize();
 
- getWinSize();
+window.onresize=getWinSize;
 
- window.onresize=getWinSize;
+
+/* Tab切换 */
+function get(td)
+
+{
+
+var tr = td.parentElement.cells;
+
+var ob = obody.rows;
+
+for(var ii=0; ii<tr.length-1; ii++)
+
+{
+
+    tr[ii].className = (td.cellIndex==ii)?"active":"inactive";
+
+    ob[ii].style.display = (td.cellIndex==ii)?"block":"none";
+
+}
+
+}
